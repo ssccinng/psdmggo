@@ -349,12 +349,19 @@ namespace psdmggo
             pen2.Color = Color.SaddleBrown;
 
             g2.DrawLine(pen2, 250, 0, 250, 3000);
+            pen2.Color = Color.Black;
+            pen2 = new Pen(Color.Red, 1);
+            pen2.Color = Color.Black;
+            for (int i = 1; i <=10; ++i)
+            {
+                g2.DrawLine(pen2, i * 50, bd.Height - 7, i * 50, bd.Height);
+            }
             timer1.Enabled = false;
         }
 
         private void Bd_Paint(object sender, PaintEventArgs e)
         {
-            
+            // 特别感谢艾斯菲力聚聚 另外牛逼花姐
         }
     }
 }
