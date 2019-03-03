@@ -12,11 +12,11 @@ using System.Windows.Forms;
 
 namespace psdmggo
 {
-    public partial class 条形图 : Form
+    public partial class tjt : Form
     {
         resstruct[,] icefairy;
         int flag;
-        public 条形图(resstruct[,] icefairy, int flag)
+        public tjt(resstruct[,] icefairy, int flag)
         {
             this.flag = flag;
             this.icefairy = icefairy;
@@ -29,7 +29,7 @@ namespace psdmggo
             Label dmgdec = new Label();
             Label statdec = new Label();
 
-            public zhuzhuang1(resstruct[] heidi, int x, int y, 条形图 main)
+            public zhuzhuang1(resstruct[] heidi, int x, int y, tjt main)
             {
 
 
@@ -156,7 +156,7 @@ namespace psdmggo
             Label dmgdec = new Label();
             Label statdec = new Label();
 
-            public zhuzhuang(resstruct[] heidi, int x, int y, 条形图 main)
+            public zhuzhuang(resstruct[] heidi, int x, int y, tjt main)
             {
                 
 

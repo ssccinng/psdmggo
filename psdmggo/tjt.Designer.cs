@@ -1,6 +1,6 @@
 ﻿namespace psdmggo
 {
-    partial class 条形图
+    partial class tjt
     {
         /// <summary>
         /// Required designer variable.
@@ -37,7 +37,7 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // 条形图
+            // tjt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -46,7 +46,7 @@
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
-            this.Name = "条形图";
+            this.Name = "tjt";
             this.Text = "伤害显示";
             this.Load += new System.EventHandler(this.tjt_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.条形图_Paint);

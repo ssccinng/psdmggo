@@ -35,14 +35,14 @@ namespace psdmggo
             textBox1.Text +=  damagetext.Text + "\r\n";
             int gg = 0;
         }
-        条形图 tt = null;
+        tjt tt = null;
         private void display_Click(object sender, EventArgs e)
         {
             resstruct[,] icefairy = yyfx.dmgcodetodata(textBox1.Text);
             
             if ( tt == null || tt.IsDisposed)
             {
-                tt = new 条形图(icefairy, 0);
+                tt = new tjt(icefairy, 0);
                 tt.Show();
             }
             else
@@ -56,7 +56,7 @@ namespace psdmggo
             resstruct[,] icefairy = yyfx.dmgcodetodata(textBox1.Text);
             if (tt == null || tt.IsDisposed)
             {
-                tt = new 条形图(icefairy, 1);
+                tt = new tjt(icefairy, 1);
                 tt.Show();
             }
             else
