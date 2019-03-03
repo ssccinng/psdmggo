@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            //this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            ////设定字体大小为12px       
+            //this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(134)));
             this.label1 = new System.Windows.Forms.Label();
             this.damagetext = new System.Windows.Forms.TextBox();
             this.diplayadd = new System.Windows.Forms.Button();

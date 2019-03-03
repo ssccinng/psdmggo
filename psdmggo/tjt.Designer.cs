@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            //this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            ////设定字体大小为12px       
+            //this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(134)));
             this.components = new System.ComponentModel.Container();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
@@ -50,6 +53,7 @@
             this.Text = "伤害显示";
             this.Load += new System.EventHandler(this.tjt_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.条形图_Paint);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tjt_KeyPress);
             this.ResumeLayout(false);
 
         }

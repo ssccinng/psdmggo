@@ -140,12 +140,12 @@ namespace psdmggo
                 if (moob[1].Contains("+"))
                 {
 
-                    qs.spaplus = 1;
+                    qs.spdplus = 1;
                     moob[1] = moob[1].Substring(0, moob[1].Length - 1);
                 }
                 else if (moob[1].Contains("-"))
                 {
-                    qs.spaplus = -1;
+                    qs.spdplus = -1;
                     moob[1] = moob[1].Substring(0, moob[1].Length - 1);
                 }
                 qs.IVs.SetSpf(int.Parse(moob[1]));
@@ -191,11 +191,25 @@ namespace psdmggo
                     sci = "";
                     continue;
                 }
-                if (Pokemondata.EngPokemonID[sci] != null)
-                {
-                    qs.pokemon = sci;
-                    break;
+                string asfl = sci;
+                int asfl1 = 0;
+                while (true) {
+                    if (Pokemondata.EngPokemonID[asfl] != null)
+                    {
+                        qs.pokemon = asfl;
+                        asfl1 = 1;
+                        break;
+                    }
+                    if (asfl.Contains('-'))
+                    {
+                        asfl = asfl.Substring(0, asfl.LastIndexOf('-'));
+                    }
+                    else
+                    {
+                        break;
+                    }
                 }
+                if (asfl1 == 1) break;
 
             }
             if (sword)

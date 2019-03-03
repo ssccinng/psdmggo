@@ -29,14 +29,15 @@ namespace PglLinkPs
         public static Hashtable TypeId = DeHashtable(Type);
         public static Hashtable EngTypeId = DeHashtable(EngType);
         public static Hashtable EngAbilityID = DeHashtable(AbilityEngName);
-        public static Hashtable EngMoveID = DeHashtable(MoveEngName);
+        
         public static Hashtable EngItemID = DeHashtable(ItemEngName);
         public static Hashtable ItemID = DeHashtable(ItemName);
-        public static Hashtable MoveID = DeHashtable(MoveName);
+        
         public static string Pokedatasour = database.Pokedata;
         public static string[,] Pokedata = Pokedatainit();
         public static MOVE[] MOVEDATA = Movedatainit();
-
+        public static Hashtable MoveID = DeHashtable(MoveName);
+        public static Hashtable EngMoveID = DeHashtable(MoveEngName);
         public static Hashtable PokemonID = PokemonIDinit();
         public static Hashtable PokemonnameID = PokemonnameIDinit();
         public static Hashtable EngPokemonID = DeHashtable(EnglishName);
@@ -86,6 +87,8 @@ namespace PglLinkPs
             string[] data = Regex.Split(database.Movedata, "\n");
             MOVE[] Pokedata = new MOVE[data.Length + 1];
             int index = 1;
+            MoveName = new string[data.Length + 1];
+            MoveEngName = new string[data.Length + 1];
             foreach (string item in data)
             {
                 if (index %50 == 0)
@@ -94,6 +97,8 @@ namespace PglLinkPs
                 }
                 string[] poke = item.Split('\t');
                 Pokedata[index] = new MOVE(poke);
+                MoveName[index] = Pokedata[index].chiname;
+                MoveEngName[index] = Pokedata[index].engname;
                 index++;
             }
             return Pokedata;
