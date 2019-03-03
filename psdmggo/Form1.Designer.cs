@@ -28,12 +28,99 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.label1 = new System.Windows.Forms.Label();
+            this.damagetext = new System.Windows.Forms.TextBox();
+            this.diplayadd = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.display = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(21, 33);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(113, 12);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "PS伤害计算结果文字";
+            // 
+            // damagetext
+            // 
+            this.damagetext.Location = new System.Drawing.Point(140, 30);
+            this.damagetext.Name = "damagetext";
+            this.damagetext.Size = new System.Drawing.Size(546, 21);
+            this.damagetext.TabIndex = 1;
+            // 
+            // diplayadd
+            // 
+            this.diplayadd.Location = new System.Drawing.Point(693, 28);
+            this.diplayadd.Name = "diplayadd";
+            this.diplayadd.Size = new System.Drawing.Size(90, 23);
+            this.diplayadd.TabIndex = 2;
+            this.diplayadd.Text = "添加";
+            this.diplayadd.UseVisualStyleBackColor = true;
+            this.diplayadd.Click += new System.EventHandler(this.diplayadd_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(140, 57);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox1.Size = new System.Drawing.Size(546, 300);
+            this.textBox1.TabIndex = 3;
+            // 
+            // display
+            // 
+            this.display.Location = new System.Drawing.Point(692, 57);
+            this.display.Name = "display";
+            this.display.Size = new System.Drawing.Size(91, 64);
+            this.display.TabIndex = 4;
+            this.display.Text = "以防守方显示";
+            this.display.UseVisualStyleBackColor = true;
+            this.display.Click += new System.EventHandler(this.display_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(692, 127);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(91, 64);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "以进攻方显示";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.display1_Click);
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(795, 381);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.display);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.diplayadd);
+            this.Controls.Add(this.damagetext);
+            this.Controls.Add(this.label1);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.Name = "Form1";
+            this.Text = "简单的录入界面-moobot";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox damagetext;
+        private System.Windows.Forms.Button diplayadd;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button display;
+        private System.Windows.Forms.Button button1;
     }
 }
 
